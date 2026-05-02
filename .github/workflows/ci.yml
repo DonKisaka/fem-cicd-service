@@ -1,0 +1,12 @@
+# .github/workflows/ci.yml — Stable stage, segment 10
+# PR validation. Calls the reusable build workflow. Does not deploy.
+
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    uses: ./.github/workflows/_build.yml
